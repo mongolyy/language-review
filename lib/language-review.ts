@@ -143,7 +143,7 @@ class Controller {
         atom.workspace.open(uri, {
             split: "right",
             searchAllPanes: true,
-        }).done(view => {
+        }).then(view => {
             if (view instanceof ReVIEWSyntaxListView) {
                 (<ReVIEWSyntaxListView>view).renderSyntaxList();
                 previousActivePane.activate();
